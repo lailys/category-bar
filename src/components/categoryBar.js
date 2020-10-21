@@ -3,15 +3,15 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-const GategoryBar = ({ children }) => {
-  return <Header>{children}</Header>
+const CategoryBar = ({ children }) => {
+  return <Header> {children} </Header>
 }
 
-GategoryBar.propTypes = {
+CategoryBar.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-GategoryBar.defaultProps = {
+CategoryBar.defaultProps = {
   siteTitle: ``,
 }
 const Header = styled.header`
@@ -36,4 +36,4 @@ const Header = styled.header`
   }
 `
 
-export default GategoryBar
+export default CategoryBar

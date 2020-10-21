@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryBar should renders correctly 1`] = `
+<header
+  className="sc-bdnylx eSiyJS"
+>
+   
+   
+</header>
+`;

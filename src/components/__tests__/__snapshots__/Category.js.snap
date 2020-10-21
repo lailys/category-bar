@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category renders correctly 1`] = `
+<div
+  className="sc-bdnylx cQpAGy"
+>
+  <a
+    className="sc-gtssRu jgDMBM"
+    href="/category/"
+  />
+</div>
+`;
+
+exports[`Category should renders correctly 1`] = `
+<div
+  className="sc-bdnylx cQpAGy"
+>
+  <a
+    className="sc-gtssRu jgDMBM"
+    href="/category/"
+  />
+</div>
+`;
