@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const Arrow = ({ sign, scroll }) => {
-  console.log(sign, "sig")
+const Arrow = ({ sign, scroll, index, total }) => {
   return (
-    <Button sign={sign[1]} onClick={e => scroll(e)}>
+    <Button sign={sign[1]} onClick={e => scroll(e)} index={index} total={total}>
       {sign[0]}
     </Button>
   )
@@ -22,6 +21,16 @@ const Button = styled.button`
   justify-content: center;
   position: fixed;
   top: 0;
+  opacity: ${props => {
+    console.log(props.sign, props.index, "props.sign, props.index")
+    if (props.sign === 16.7 && props.index === 0) {
+      return 0
+    }
+    if (props.sign === 80.3 && props.index === props.total - 7) {
+      return 0
+    }
+    return 1
+  }};
   left: ${props => props.sign}vw;
   border: none;
   width: 4vw;

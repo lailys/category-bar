@@ -8,7 +8,6 @@ class Categories extends Component {
     index: 0,
   }
   scrollLeft = e => {
-    console.log("mmmm", this.state.index)
     if (this.state.index > 0) {
       this.setState(prevState => ({
         index: prevState.index - 1,
@@ -16,7 +15,6 @@ class Categories extends Component {
     }
   }
   scrollRight = e => {
-    console.log("mmmm", this.state.index)
     if (this.state.index < categories.length - 6) {
       this.setState(prevState => ({
         index: prevState.index + 1,
@@ -24,7 +22,6 @@ class Categories extends Component {
     }
   }
   render() {
-    console.log(this.myRef, ">>>.......")
     return (
       <Scroller ref={this.myRef}>
         {categories
@@ -32,8 +29,18 @@ class Categories extends Component {
           .map((cat, i) => (
             <Category category={cat} key={i} />
           ))}
-        <Arrow sign={arrow[0]} scroll={this.scrollLeft} />
-        <Arrow sign={arrow[1]} scroll={this.scrollRight} />
+        <Arrow
+          sign={arrow[0]}
+          scroll={this.scrollLeft}
+          index={this.state.index}
+          total={categories.length}
+        />
+        <Arrow
+          sign={arrow[1]}
+          scroll={this.scrollRight}
+          index={this.state.index}
+          total={categories.length}
+        />
       </Scroller>
     )
   }
