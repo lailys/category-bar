@@ -133,8 +133,8 @@ class Categories extends PureComponent {
 }
 
 const arrow = [
-  ["<", 414],
-  [">", 1051],
+  ["<", "calc(((100vw - 600px) / 2) - 35px)"],
+  [">", "calc(((100vw - 600px) / 2) + 600px)"],
 ]
 const categories = [
   "Vlog",
@@ -171,7 +171,7 @@ const Arrow = styled.button`
   justify-content: center;
   position: fixed;
   top: 10vh;
-  left: ${props => props.sign}px;
+  left: ${props => props.sign};
   opacity: ${props => props.isActive};
   border: none;
   width: 35px;
