@@ -24,13 +24,13 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 0;
-  left: 16.7vw;
+  top: 10vh;
+  left: calc((100vw - 600px) / 2);
   overflow-y: hidden;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
-  width: 66.8vw;
+  width: 600px;
   height: 10vh;
   & :-webkit-scrollbar {
     display: none;
