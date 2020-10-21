@@ -175,6 +175,6 @@ const Arrow = styled.button`
   opacity: ${props => props.isActive};
   border: none;
   width: 35px;
-  height: 10vh;
+  height: 8vh;
 `
 export default Categories

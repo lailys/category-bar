@@ -31,7 +31,7 @@ const Header = styled.header`
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
   width: 600px;
-  height: 10vh;
+  height: 8vh;
   & :-webkit-scrollbar {
     display: none;
   }
