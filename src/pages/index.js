@@ -6,9 +6,21 @@ import Categories from "../components/categories"
 const IndexPage = () => (
   <Layout>
     <GlobalStyle />
-    <Categories />
+    <Categories categories={categories} />
   </Layout>
 )
+const categories = [
+  "Vlog",
+  "Interview",
+  "Event",
+  "Tutorial",
+  "Product Review",
+  "Testimonial",
+  "Animation",
+  "Live Streaming",
+  "Brand Film",
+  "Product Review",
+]
 const GlobalStyle = createGlobalStyle`
   body,html {
     margin: 0;
@@ -17,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;    width: 100vw;
     height: 100vh;
+    & ::-webkit-scrollbar {
+      display: none;
+    }
+    }
+    * ::-webkit-scrollbar {
+      display: none;
     }
     button:active:focus,
     button:focus {
