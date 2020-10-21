@@ -12,7 +12,7 @@ const Category = ({ category }) => {
 const CategoryLink = styled.div`
   background: #131414;
   margin: 0;
-  padding: 12px;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,9 @@ const CategoryLink = styled.div`
 `
 const StyledLink = styled(props => <Link {...props} />)`
   font-family: "Roboto", sans-serif;
-  // background: yellow;
+  white-space: nowrap;
+  margin: 0;
+  padding: 12px 18px;
   font-size: 70%;
   font-weight: 900;
   color: white;
@@ -33,7 +35,7 @@ const StyledLink = styled(props => <Link {...props} />)`
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 100px;
+  // min-width: 100px;
   &:hover {
     color: #fc32fc;
   }

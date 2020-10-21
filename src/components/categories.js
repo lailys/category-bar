@@ -47,7 +47,7 @@ class Categories extends PureComponent {
     })
     this.setState({
       buttonLeft: scrollLeft >= 100 ? 1 : 0,
-      buttonRight: scrollLeft <= 500 ? 1 : 0,
+      buttonRight: scrollLeft <= 480 ? 1 : 0,
     })
   }
 
@@ -63,7 +63,7 @@ class Categories extends PureComponent {
         buttonLeft: 0,
       })
     }
-    if (this.state.distance < 500) {
+    if (this.state.distance <= 480) {
       this.setState({
         buttonRight: 1,
       })
@@ -79,18 +79,19 @@ class Categories extends PureComponent {
     }
   }
   scrollRight() {
+    console.log(this.state.distance, ">")
     if (this.state.distance >= 120) {
       this.setState({
         buttonLeft: 1,
       })
     }
-    if (this.state.distance >= 500) {
+    if (this.state.distance > 480) {
       this.setState({
         buttonRight: 0,
       })
     }
 
-    if (this.state.distance <= 600) {
+    if (this.state.distance <= 480) {
       this.setState(prevState => ({
         distance: prevState.distance + 120,
       }))
@@ -137,8 +138,8 @@ class Categories extends PureComponent {
 }
 
 const arrow = [
-  ["<", "calc(((100vw - 600px) / 2) - 35px)"],
-  [">", "calc(((100vw - 600px) / 2) + 600px)"],
+  ["<", "calc(((100vw - 600px) / 2) )"],
+  [">", "calc(((100vw - 600px) / 2) + 565px)"],
 ]
 const categories = [
   "Vlog",
@@ -160,11 +161,12 @@ const Scroller = styled.div`
   flex-direction: row;
   overflow-x: scroll;
   list-style: none;
-  width: ${categories.length * 120}px;
+  width: ${categories.length * 120 + 1}px;
   height: 8vh;
 `
 const Arrow = styled.button`
   background: #131414;
+  // background: #131414d0;
   color: #fc32fc;
   font-size: 130%;
   font-weight: bold;
