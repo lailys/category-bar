@@ -15,7 +15,7 @@ class Categories extends PureComponent {
     }
     this.scrollBox = null
     this.overflow = this.overflow.bind(this)
-    this.debounceOV = debounce(this.overflow, 800)
+    this.debounceOV = debounce(this.overflow, 200)
     this.getScrollPosition = this.getScrollPosition.bind(this)
     this.debounceSP = debounce(this.getScrollPosition, 200)
   }
@@ -44,6 +44,10 @@ class Categories extends PureComponent {
     this.setState({
       canScrollLeft: scrollLeft > 0,
       canScrollRight: scrollLeft !== scrollWidth - clientWidth,
+    })
+    this.setState({
+      buttonLeft: scrollLeft >= 100 ? 1 : 0,
+      buttonRight: scrollLeft <= 500 ? 1 : 0,
     })
   }
 

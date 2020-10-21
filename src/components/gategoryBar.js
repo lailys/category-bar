@@ -16,7 +16,6 @@ GategoryBar.defaultProps = {
 }
 const Header = styled.header`
   background: #131414;
-  // background: yellow;
   margin: 0;
   padding: 0;
   display: flex;
