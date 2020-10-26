@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react"
+import PropTypes from "prop-types"
 import Category from "./category"
 import styled from "styled-components"
 import debounce from "lodash.debounce"
@@ -179,7 +180,9 @@ class Categories extends PureComponent {
     )
   }
 }
-
+Categories.propTypes = {
+  categories: PropTypes.array,
+}
 const arrow = [
   ["<", "calc(((100vw - 600px) / 2) )"],
   [">", "calc(((100vw - 600px) / 2) + 565px)"],
@@ -212,12 +215,12 @@ const Arrow = styled.button`
   align-items: center;
   justify-content: ${props =>
     props.arrowSign === "<" ? "flex-start" : "flex-end"};
-  position: fixed;
-  top: 10vh;
-  left: ${props => props.arrowLocation};
+  position: absolute;
+  left: ${props => (props.arrowSign === "<" ? 0 : 565)}px;
   opacity: ${props => props.isActive};
   border: none;
   width: 35px;
   height: 8vh;
 `
+
 export default Categories

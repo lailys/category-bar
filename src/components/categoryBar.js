@@ -22,9 +22,9 @@ const Header = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 10vh;
-  left: calc((100vw - 600px) / 2);
+  position: relative;
+  // top: 10vh;
+  // left: calc((100vw - 600px) / 2);
   overflow-y: hidden;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
